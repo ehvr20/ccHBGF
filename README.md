@@ -5,13 +5,11 @@ This repository provides an implementation of the `cc_hbgf` function, which perf
 ## Overview
 
 The `cc_hbgf` function performs consensus clustering by following these steps:
-1. Calculates the optimal number of clusters `optimal_k` based on the input `clustering_matrix`.
-2. Constructs the adjacency matrix `A` of the hypergraph from the clustering matrix.
-3. Computes the normalized Laplacian matrix `L` from the adjacency matrix `A`.
-4. Performs Singular Value Decomposition (SVD) on the Laplacian matrix `L` using `scipy.sparse.linalg.svds`.
-5. Normalizes the resulting singular vectors `U` and `V`.
-6. Uses KMeans to fit the normalized singular vectors for partitioning.
-7. Predicts the final consensus clustering labels.
+1. Construction of a `bipartite graph`
+2. Definition of an Adjaceny Matrix `A`
+3. Partitioning of the graph utilising either:
+    - `Spectral Clustering`
+    - `METIS`
 
 ## Installation
 
@@ -19,8 +17,9 @@ To use this function, you need to have Python installed along with the following
 - `numpy`
 - `scipy`
 - `sklearn`
+- `pymetis` (optional)
 
 You can install these packages using pip:
 
 ```bash
-pip install numpy scipy scikit-learn
+pip install numpy scipy scikit-learn pymetis
