@@ -7,8 +7,7 @@ setup(
     install_requires=[
         'numpy',
         'scikit-learn',
-        'scipy',
-        'pymetis'
+        'scipy'
     ],
     author='E. H. von Rein',
     description='A consensus clustering algorithm using Hybrid Bipartite Graph Formulation (HBGF)',

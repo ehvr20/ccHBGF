@@ -5,3 +5,4 @@ tests
 docs
 run_tests.py
 .DS_Store
+ccHBGF/_legacy.py
