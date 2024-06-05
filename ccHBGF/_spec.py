@@ -1,5 +1,3 @@
-"Copyright (C) 2024 E. H. von Rein"
-
 import logging
 from typing import Literal, Union, Optional
 
@@ -189,7 +187,8 @@ def _spectral_partitioning(adj: NDArray,
 
     return membership
 
-def _orthogonalize_centers(vectors: NDArray) -> NDArray:
+def _orthogonalize_centers(vectors: NDArray
+                           ) -> NDArray:
     """
     Perform Modified Gram-Schmidt (MGS) orthogonalization on a set of input vectors.
 

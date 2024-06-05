@@ -2,14 +2,23 @@ from setuptools import setup, find_packages
 
 setup(
     name='ccHBGF',
-    version='0.1',
-    packages=find_packages(),
+    version='0.0.1',
+    description='Consensus Clustering using Hybrid Bipartite Graph Formulation (HBGF)',
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
+    author='E. H. von Rein',
+    url='https://github.com/ehvr20/ccHBGF',
+    packages=find_packages(),  # Automatically find packages in the directory
     install_requires=[
         'numpy',
         'scikit-learn',
         'scipy'
     ],
-    author='E. H. von Rein',
-    description='A consensus clustering algorithm using Hybrid Bipartite Graph Formulation (HBGF)',
-    url='https://github.com/ehvr20/ccHBGF',
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+        'Intended Audience :: Science/Research'
+    ],
+    python_requires='>=3.6',
 )

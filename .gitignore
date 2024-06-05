@@ -1,8 +1,12 @@
+*.egg-info
 */__pycache__
 */.DS_Store
+venv
+dist
+build
+legacy
+
 main.py
-tests
-docs
-run_tests.py
+run_tests.sh
 .DS_Store
 ccHBGF/_legacy.py

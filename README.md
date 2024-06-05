@@ -7,7 +7,7 @@ This repository provides an implementation of the `ccHBGF` function, which perfo
 The `ccHBGF` function performs consensus clustering by following these steps:
 1. Construction of a `bipartite graph`
 2. Definition of an Adjaceny Matrix `A`
-3. Partitioning of `A` using `spectral partitioning`
+3. Partitioning of `A` using spectral partitioning
 
 ## Installation
 
