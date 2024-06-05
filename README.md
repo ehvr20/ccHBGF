@@ -1,6 +1,6 @@
 # Consensus Clustering with Hybrid Bipartite Graph Formulation (HBGF)
 
-This repository provides an implementation of the `cc_hbgf` function, which performs consensus clustering using Hybrid Bipartite Graph Formulation (HBGF).
+This repository provides an implementation of the `ccHBGF` function, which performs consensus clustering using Hybrid Bipartite Graph Formulation (HBGF).
 
 ## Overview
 
