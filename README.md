@@ -4,12 +4,10 @@ This repository provides an implementation of the `ccHBGF` function, which perfo
 
 ## Overview
 
-The `cc_hbgf` function performs consensus clustering by following these steps:
+The `ccHBGF` function performs consensus clustering by following these steps:
 1. Construction of a `bipartite graph`
 2. Definition of an Adjaceny Matrix `A`
-3. Partitioning of the graph utilising either:
-    - `Spectral Clustering`
-    - `METIS`
+3. Partitioning of `A` using `spectral partitioning`
 
 ## Installation
 
@@ -17,9 +15,9 @@ To use this function, you need to have Python installed along with the following
 - `numpy`
 - `scipy`
 - `sklearn`
-- `pymetis` (optional)
 
 You can install these packages using pip:
 
 ```bash
-pip install numpy scipy scikit-learn pymetis
+pip install numpy scipy scikit-learn
+```
