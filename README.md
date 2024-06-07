@@ -2,10 +2,6 @@
 
 A python consensus clustering function utilising Hybrid Bipartite Graph Formulation (HBGF). HBGF is a graph-based consensus multi-source clustering technique. This method constructs a bipartite graph with two types of vertices: observations and clusters from different clusteirng solutions. An edge exists only between an observation vertex and a cluster vertex, indicating the object's membership in that cluster. The graph is then partitioned using spectral partitioning to derive consensus labels for all observations.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ehvr20/ccHBGF/main/img/bipartite_graph.png" alt="Bipartite Graph Example"/>
-</p>
-
 ## Overview
 
 The `ccHBGF` function performs consensus clustering by following these steps:
