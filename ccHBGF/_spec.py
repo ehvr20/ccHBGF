@@ -12,7 +12,7 @@ logger = logging.getLogger('ccHBGF')
 def ccHBGF(clustering_matrix: NDArray,
            n_clusters: Optional[int] = None,
            tol: float = 0.1,
-           init: Literal['orthogonal', 'kmeans++'] = 'kmeans++',
+           init: Literal['orthogonal', 'kmeans++'] = 'orthogonal',
            random_state: Optional[Union[int, np.random.RandomState, np.random.Generator]] = None,
            verbose: bool = False
            ) -> NDArray:
@@ -36,7 +36,7 @@ def ccHBGF(clustering_matrix: NDArray,
         The tolerance for scipy.sparse.linalg.svds(), where `0` is machine precision.
 
     init : {'orthogonal', 'kmeans++'}, optional
-        Method for initializing KMeans centers. Default is 'kmeans++'.
+        Method for initializing KMeans centers. Default is 'orthogonal'.
 
     random_state : {None, int, numpy.random.Generator, numpy.random.RandomState}, optional
         Controls the randomness of the algorithm for reproducibility. Default is None.
@@ -60,6 +60,9 @@ def ccHBGF(clustering_matrix: NDArray,
     # Define expected number of clusters, if not given
     if not n_clusters:
         n_clusters = int(np.max(np.apply_along_axis(lambda x: np.unique(x).size, 0, clustering_matrix)))
+        if n_clusters == 1:
+            logger.info('Only 1 cluster detected.')
+            return np.zeros(shape=clustering_matrix.shape[0])
 
     logger.info(f'Detected {n_clusters} clusters.')
 
@@ -147,7 +150,7 @@ def _spectral_partitioning(adj: NDArray,
     logger.info(f'Transformed A to Laplacian Matrix (L) of shape {L.shape}')
 
     # Perform Singular Value Decomposition (SVD)
-    U, _, V = linalg.svds(L, k, tol=tol, random_state=random_state)
+    U, _, V = linalg.svds(L, min(min(L.shape)-1, k), tol=tol, random_state=random_state)
 
     logger.info('Decomposed L into Singular Values (SVs)')
 
