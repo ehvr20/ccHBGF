@@ -9,6 +9,10 @@ The `ccHBGF` function performs consensus clustering by following these steps:
 2. Decomposition of `A` into a spectral embedding `UVt`
 3. Clustering of `UVt` into a consensus labels
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ehvr20/ccHBGF/main/img/bipartite_graph.png" alt="Overview of Consensus Clustering Workflow"/>
+</p>
+
 ## Installation
 
 ```bash
