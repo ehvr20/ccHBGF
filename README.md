@@ -28,6 +28,7 @@ Where the `solutions_matrix` is of shape (m,n):
 - n = the number of different clustering solutions.
 
 ![](img/workflow.svg "Overview of Consensus Clustering Workflow")
+*See example.ipynb for more detailed example usage.
 
 ## References
 

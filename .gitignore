@@ -7,6 +7,5 @@ build
 legacy
 
 main.py
-run_tests.sh
 .DS_Store
 ccHBGF/_legacy.py
