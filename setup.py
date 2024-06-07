@@ -2,8 +2,8 @@ from setuptools import setup, find_packages
 
 setup(
     name='ccHBGF',
-    version='0.0.1',
-    description='Consensus Clustering using Hybrid Bipartite Graph Formulation (HBGF)',
+    version='0.0.2',
+    description='ccHBGF: Consensus Clustering using Hybrid Bipartite Graph Formulation (HBGF)',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     author='E. H. von Rein',

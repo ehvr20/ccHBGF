@@ -27,7 +27,7 @@ Where the `solutions_matrix` is of shape (m,n):
 - m = the number of observations
 - n = the number of different clustering solutions.
 
-![](img/workflow.svg "Overview of Consensus Clustering Workflow")
+![](https://raw.githubusercontent.com/ehvr20/ccHBGF/main/img/workflow.svg "Overview of Consensus Clustering Workflow")
 *See example.ipynb for more detailed example usage.
 
 ## References
